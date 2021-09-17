@@ -1,0 +1,116 @@
+.journal__main-content {
+    display: flex;
+}
+
+.journal__sidebar {
+    background-color: $dark-grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 550px;
+}
+
+.journal__sidebar-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.journal__sidebar-navbar h3 {
+    font-weight: lighter;
+}
+
+.journal__new-entry {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: darken($color: white, $amount: 20);
+    }
+}
+
+.journal__entries {
+    flex: 1 1 auto;
+    margin-top: 30px;
+    overflow-y: scroll;
+
+    /* Estilos barra (thumb) de scroll */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgb(104, 104, 104);
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background-color: #999999;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #473dff;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos track de scroll */
+    &::-webkit-scrollbar-track {
+        background: #e1e1e1;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track:hover,
+    &::-webkit-scrollbar-track:active {
+        background: #d4d4d4;
+    }
+}
+
+.journal__entry {
+    background-color: white;
+    border-radius: 4px;
+    color: $dark-grey;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.journal__entry-picture {
+    width: 75px;
+    object-fit: scale-down;
+}
+
+.journal__entry-body {
+    padding: 10px;
+    height: 30px;
+}
+
+.journal__entry-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.journal__entry-content {
+    font-size: 10px;
+}
+
+.journal__entry-date-box {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.journal__entry-date-box span {
+    font-size: 12px;
+}
